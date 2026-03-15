@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html file for css testing</title>
+</head>
+
+<!-- 2) using the internal css inside the style tag  -->
+<style>
+      #main{
+        width: 40rem;
+        height: 20rem;
+        border: 2px solid lightseagreen;
+      }
+</style>
+
+
+<!-- 3. EXTERNAL (BEST - separate file) -->
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- make sure k hamne style.css file create kri hor uska path theek pass kiya ho in href attribute  -->
+
+<body>
+
+    <!-- without the css html code  -->
+    <div id="main">
+        <!-- 1) inline way to add css inside elements  -->
+        <h2 style="color: antiquewhite;">This is the simple html </h2>
+        <section class="box_section">
+           <h3>This section is for boxes in the website </h3>
+            <div id="box111">
+                   Box 1 in the css website without css 
+            </div>
+        </section>
+    </div>
+
+    <!-- css add krne k 3 ways hai 
+     
+     1) inline css 
+          its qucik fast but not much better 
+        <h2 style="color: antiquewhite;">This is the simple html </h2>
+          
+     2) internal css (for small pages or small changes or limited styling not for big websites )
+        yeh ham style tag main krte hain 
+
+      <style>
+        #main{
+        width: 40rem;
+        height: 20rem;
+        border: 2px solid lightseagreen;
+        }
+      </style>
+
+
+      3. EXTERNAL (BEST - separate file) 
+       <link rel="stylesheet" href="style.css">
+    -->
+</body>
+
+
+</html>
