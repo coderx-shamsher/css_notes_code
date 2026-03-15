@@ -1,0 +1,40 @@
+/* this is css comments  */
+
+/* 1) elements selectors (all the header elements ) 
+esa krne say sare header yan jo bhi element ham as selector use kr rahe hain ! target hoga.. 
+*/
+
+header{
+   width: 40rem;
+   height: 20rem;
+   border: 3px solid chocolate;
+}
+
+/* class selector , ham class selector ko .classname ki help say use krte hain..  
+ek element ko multiple classes pass kr sakte hain 
+*/
+.without{
+    width: 200px;
+    padding: 20px;
+    border: 10px solid lightcoral;
+    background-color: lightblue;
+}
+
+/* Id selector , ham id selector koi #idname ki help say use krte hain 
+Ids unique hoti hain or ek element pr ek he id ho sakti hai its like roll number.... 
+*/
+
+#bx2{
+     width: 200px;
+    padding: 20px;
+    border: 10px solid lightcoral;
+    background-color: lightblue;
+    box-sizing: border-box;
+}
+
+
+/* Multiple classes */
+.with.red{
+    color: red;
+}
+
