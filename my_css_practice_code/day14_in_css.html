@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css media query</title>
+    <!--  media query da use hunda hai jdo ek website alag alag devices ch open hove tn us de styles nu change kita jave according to resposiveness of the  device width or height of devices .. 
+    
+    new syntax of the media query 
+    1) @media and fir (not/only onda hai means :- ager yeh mediatype hai tn show karo , yan yeh nhi hai tn show karo .. ) next kis device lyi likh rahe hoo .. (expressions) and then css-code 
+
+    @media only|not (mediatype)  and (expressions){
+    
+     css-code;  
+    
+    }
+
+
+    note:- mostly only he use hunda hai... 
+    mediatype:- all,screen(laptops, phones, etcs), print, speech
+    -->
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        
+        /* */
+        /* */
+        /* min-width , sb ton pahla dena , means minimum Npx value tak di with te style or koi b action perform hovega .. 
+        example :- min-width: 720px  es to jada px hon te bg color change hovga .. 
+
+        or max-width : 420px  , es to ek px v ghat hoya tn bg color chnage hovaga ani webpage de according kuj b action laga sakde ho keo k main use hai device di responsiveness and page nu small and big screens ch kive show krvan hai .....
+        
+        */
+        @media only screen and (min-width:720px) {
+            body {
+
+                background-color: rgb(66, 66, 204);
+            }
+        }
+
+        @media only screen and (max-width:420px) {
+
+            /* ager yeh maxwidth 430 to chota hovega tn yeh media query apply hovegi ..
+           and these the 90% of media query 
+           */
+            body {
+                background-color: bisque;
+
+            }
+
+            .boxes {
+                flex-direction: column;
+                
+            }
+            
+        }
+        
+        .box {
+            /**
+            
+            **/
+            width: 222px;
+            height: 222px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(114, 119, 119);
+            
+            
+            
+        }
+        .boxes{
+            /* make boxes horizontal */
+            display: flex;
+             
+        }
+        
+        
+    </style>
+    <!-- ek hor expression hai (orientation: landscape )
+    note:- je kar height jada  hai width to tn protrate hovegi ager width jada hai height ton tn landscape 
+    
+    but that's type of media q not so used , uper vali he moslty use hundi hai .. 
+
+    @media only screen and (oriantation: landscape){
+       
+       .box{
+        border: solid white; 
+       
+       }
+    }
+    -->
+</head>
+
+<body>
+    <div>
+        hyy am body
+    </div>
+    <div class="boxes">
+        <div class="box">
+            box1
+        </div>
+        <div class="box">
+            box2
+        </div>
+        <div class="box"> box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <!--  apa ek responsive page banya jis da body color change hund hai alag alag device widths de according  and apa kuj boxes banye jo device width de heshab nal vartical or horizontal hunde han using 
+      media queries .... 
+      
+      that's all the today's coding lecture ...
+      date:- 14 mar 25  time :- 1.14pm
+
+      
+      -->
+</body>
+
+</html>
