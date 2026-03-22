@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+      /* universal selector */
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+           .box{
+            border: 2px solid rgb(7, 112, 112) ;
+            display: inline-block;
+            padding: 45px;
+            margin: 26px;
+            display: inline-flex;
+            
+        }
+        .box1{
+            border: 2px solid rgb(0, 0, 0);
+            display: block;
+            
+        }
+        .box10{
+            /* display: none;*/
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+    <body>
+
+        <!-- block element to inline element in style with display property ... , maine box class main display property ka use kiya hai jis ki madat say block element inline ban gya .....
+        
+        1 step ) create two div, una ch kuj type kita .. and  internal css main style tag main 
+        * tag use kiya m0 p0 diya ..
+        box class main border diya 
+        so yeh div ek block element hai to jo bhi next element hoga vo next line main ayga means ek element puri width leyga ..
+
+        2 step ) create  two span and type some text this is inline element , to sara next text ek dusre k aass pass ayga ...
+        
+        3 step ) use display property in class box into style css , set display property inline and see the difference , block element inline element jisa kam kar raha hai .. 
+        
+        4 step ) add some padding in class box and see , padding baki tino taraff say lagega pr uper say nhi lagega , jab app display property ko inline set karte hoo,, yeh top padding respect nhi karta ager element inline element hai.
+        ager hamm margin add karte hain to bhi same thing ..
+        app inline set karne k bad width bhi set nhi hogi ... 
+    
+        ager ise fix karna hai to inline-block kar do element ko
+        us se width bhi add kar sakte hoo..
+
+
+        5 step ) new class add kro or add border and add display property block to convert inline to block 
+        use this class to span tag and see the diffrence ..
+        
+        6 step ) add new class or us class ko ek div ko de do or us main display property ko none kar doon
+        ager display none kar di to yeh element gyab ho jye ga or , is class new space bhi gyab krde or box bhi see the code and preview 
+
+        7 step ) ager main display property ko hidden kar du / using visibility hiiden property ( visibility hidden property in display ) box gyab hoga pr space nhi 
+         thats how we use ..
+
+        8 step ) another one property of display is flex , justify-content center , element de type nu center karn lyi 
+        lex next cover karna hai ..
+        inline-flex karne say things neche nhi ayengi.....
+        
+        note :- use flex in  inspect mode to GUI mode feature to better understand the styling ..
+
+        so that's alll about today ... 
+        
+
+        today : 5 mar 25 , 9:20 PM
+        today lecture with coding is done !!! 
+        
+ 
+        -->
+       <div class="box  "> 
+        this is block element
+      </div>
+       <div class="box" >
+             this is inline  
+             element
+       </div >
+       <span>
+           this is span
+       </span>
+       <span class="box"> 
+            this is also span
+       </span>
+    
+    
+</body>
+</html>
