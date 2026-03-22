@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists in CSS </title>
+     <style>
+        /**  to make a nav bar list-style nui none kar do ... 
+         ager is da background color change karoge tn marker list item de baher avega marker , ager is nu list items de ander karna hai tn use list-style-position inside kardo and marker ander aa javega  
+         list-marker nu image nal replace kita ja sakda hai using 
+         list-style 
+
+         note:- jad ve inspect mode ch element.style ch jo changes kroge oh  as inline css add hovegi yeh mind ch rakhna ..
+        **/
+
+        /* note :-  to make nav bar 1) list style is none and 
+        
+        2) nav de ul ch display flex 
+        and padding set karde han  nav ul li te tn jo list items ch space ayve  ...
+      
+        and that's how to make a nav bar but its not done .... 
+        
+        */
+
+        nav ul{
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            padding: 22px ;
+
+                 
+                 
+
+
+                 /*
+                 list-style: lower-alpha;
+                 list-style-type: "$$  ";  
+                 background-color: cadetblue; 
+                 list-style-position: inside;
+                 list-style-position: inside;
+                 border:  2px solid black;
+                  list-style-image: url("url of image here paste "); 
+                    */
+
+
+
+
+
+            }       
+     </style>
+</head>
+
+
+
+<body>
+  <!--  this is how to make nav bar using lists
+    list key bhi display value hoti hai (list-items), list ka display value list-items hota hai , means ek marker hovega and ek item hovega, list ander ek marker hunda hai and ek items hundi hai ... 
+    Q :- how to remove marker to make list nav bar ??
+    ek property hundi hai list-style , ager list-style: none kar doge tn marker disappear ho javega..
+
+  -->
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>back</li>
+        </ul>
+
+    </nav>
+
+    <div class="box"></div>
+</body>
+
+</html>
