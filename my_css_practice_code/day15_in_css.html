@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Css float and clear </title>
+    <style>
+       .cards{
+            border: 2px solid black;
+
+            /* ager image container say baher ja rahi hai to use this property .. 
+            dispaly flow-root nal asi container de ander de elements nu fit kar sakde hai ...
+            display: flow-root;
+
+            */
+ 
+       }
+
+       img{
+           
+          /* float nal img nu right or left ch set kar sakde han es nal container ch jo content hai oh ve image de nal he set hovega .... image float karega or text cut nhi hovega .. with this property ..
+          
+          yeh pahala use hunda c blogs ch ek side image or text , image float karegi or text hovega .. but now hun eh use nhi hundi .. 
+
+          */ 
+           float: left;
+
+       }
+       img:nth-child(3){
+            float: right;
+       }
+     /*
+     
+     */
+     .card{
+            border:2px solid rgb(187, 173, 92);
+     }
+     .card:nth-child(2){
+        /* means card de 2rd child element ch eh property apply hovegi . 
+        clear right means is de right side koi image float nhi karegi left or both ve use huunda hai both means no in left or right 
+
+        */
+             background-color: blanchedalmond;
+             clear: both;
+     }
+    </style>
+</head>
+<body>
+      <div class="cards">
+         <img src="/HTML/646733.png" alt="" width="200px">
+          <div class="card">
+             card1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione est vel nemo officiis porro maiores at rem id placeat ad excepturi, vitae nesciunt alias explicabo? Obcaecati ullam illum laudantium quaerat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita enim fugiat suscipit optio natus vel maiores consectetur aperiam velit non, nihil repellendus ullam fuga nulla quia facilis qui iusto itaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo saepe ea autem necessitatibus doloribus provident eaque eligendi, molestiae, voluptatum minus itaque deleniti mollitia quae velit temporibus deserunt minima excepturi ducimus.
+            
+            </div>
+            <img src="/HTML/896796.jpg" alt="" width="250px">
+
+        <div class="card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod est id sapiente quaerat temporibus repellat quas eius eum, consequatur pariatur optio incidunt neque quos eaque dignissimos ducimus, deleniti voluptate quibusdam inventore asperiores rem , velit, alias omnis dicta nemo rem facere vero culpa excepturi enim dolores? Magnam labore minus qui similique perferendis facere rerum nisi, enim aperiam alias suscipit sint quam voluptates blanditiis inventore delectus neque itaque fuga atque eos obcaecati quas. Excepturi ratione quis fuga natus? Iure ab rem neque deserunt reiciendis velit incidunt veniam reprehenderit? Incidunt soluta eius, ut consequatur saepe esse voluptates nesciunt qui hic ex voluptatum, blanditiis inventore consectetur sapiente rem molestias quasi. Atque ea officiis repellendus tempora, nesciunt laudantium cumque necessitatibus reiciendis, nobis assumenda fugit dicta voluptatum optio temporibus illo quam voluptas qui porro est. Minus eaque corporis nisi unde excepturi in quos modi veritatis repudiandae minima placeat cumque, ea culpa libero porro dolore. Neque accusantium culpa eveniet cupiditate fugiat necessitatibus molestias illo corrupti assumenda rem iste, delectus, placeat cum ex ea iusto vel doloremque dolorem odit fugit? Vel earum accusantium repellat quidem natus odit inventore numquam in tempore. Facilis, nam provident similique iusto labore ipsam porro deserunt incidunt voluptatum sunt, illum, praesentium consectetur adipisci dolor sapiente optio cumque voluptate nulla fuga rem autem? Dolorem repudiandae harum sint officia quae beatae laboriosam sunt maxime cumque!card2</div>
+          <div class="card">card3 </div>
+
+      </div>
+
+      <!--  after all float and clear not used .....  just for maintaining old websites but not recommanded now days ... 
+      its just for knowing .... 
+      
+        
+      -->
+</body>
+</html>
