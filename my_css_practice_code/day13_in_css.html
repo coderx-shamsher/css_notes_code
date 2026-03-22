@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Css Variables </title>
+    <!--  css ch global variable like programming languages define/declare nhi kar sakde ..
+     you first declare root scope here 
+        1) :root{ 
+        
+         /* variable declaration  */ 
+         --color: colorname
+         --color2: colorname
+
+           
+        
+        }
+        new how to use these ?
+        jis element ch use karna
+        
+          syntax  :- 
+         var(--variable_name)
+       
+        :- using these variables in css , apa apni website ch koi color change karna hove tn ek vari ch he change kar sakde han 
+        note:- root ander jo bhi hunda hai global variable hunda hai or in css apa variables :root ch he declare karnde han ... 
+       
+        local variables :- ager main mere ul de first-child da color change karna hai 
+        apa us element class ch yeh element css ch he local variable delcare kar k use kar sakde han .. 
+        that's easy .. 
+
+        tip:- is nu border ch ve use kar sakde han 
+        apa variable ch other properties nu ve store kr sakde han .. like length value ;- sizing units , opacity , background urls strings , numbers all these can be held so bacially the 
+
+        <<<<<**  tip:- we make theme  changer webpage with different color themes   **>>>>> 
+   
+         today :- date - 14 mar 25
+         time ;- 12.09pm 
+         
+   
+    -->
+    
+    <style>
+
+        :root{
+            /* these are the global variables  */
+             --newcolor1:rgb(10, 102, 48);
+             --newcolor2:rgb(57, 139, 57);
+
+        }
+        .box{
+            /* is ch main global variable use kita hai ager main ek local variable use karna 
+             hai or jado local varibale use hunda hai tn global overwrite ho janda hai .. 
+             
+             *note:- ager main var local nu neche kar da tn local var apply hovga ,
+             ager main global nu neche kar da tn global var apply hovga ..
+             
+              *note :- jo ab to neche hovega us nu preority milegi in css  
+                       
+            */
+            /* new local variable overwrite global variables .. see in the broswer ...*/
+            --newcolor:rgb(207, 150, 42);
+            background-color:var(--newcolor1);
+            background-color: var(--newcolor);
+
+
+
+        }
+        .box1{
+            background-color: var(--newcolor2);
+        }
+         
+        /* ul display flex kar k text nu horizontal karta */
+        ul {
+             display: flex;
+            }
+        
+
+        ul li:first-child{
+            /* yeh local variable di value is element de first-child te apply hovgi*/
+             --localcolor: rgb(76, 76, 218);
+             background-color: var(--localcolor);
+        }
+        ul li:last-child{
+            /* yeh local variable di value is element de last child te apply hovgi .. */
+             --localcolor:rgb(112, 46, 173);
+             background-color: var(--localcolor);
+        }
+        
+            ul li {
+                list-style-type: none;
+                padding: 22px;
+        }
+         
+    </style>
+
+</head>
+<body> 
+     <div class="box">
+
+           <ul>
+                <li>home</li>
+                <li>main</li>
+                <li>about</li>
+           </ul>
+     </div>
+    
+     <div class="box1">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam deleniti voluptates omnis itaque doloribus dolorum blanditiis possimus illo. Corrupti et, veniam maxime iure deleniti laborum sint praesentium ex architecto?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, fugit aperiam eaque dolores molestiae harum sapiente doloremque at corporis ab, iure praesentium!
+     </div>
+</body>
+</html>
