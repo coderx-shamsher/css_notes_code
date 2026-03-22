@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+
+        .box{
+            border: 2px solid lightslategrey;
+            margin: 0;
+            padding: 10px;
+            box-shadow: 4px 10px 15px rgb(37, 159, 207) ;
+            
+        }
+        .box1{
+            
+            text-shadow: 2px 2px 2px seagreen;
+            outline-offset: 2px;
+            border: 2px solid brown;
+            border-radius: 22px;
+            outline: 2px solid seagreen;
+               outline-offset: 1px ;            
+            
+            
+            }  
+    </style>
+
+</head>
+<body> 
+       <!-- how to give shadows and outlines to elements 
+       1) shadows :- shadows kisi bhi element nu virtual shadow dena ..
+       i) text-shadow:- text nu shadow dena... text shadow not so used but mnu janna jaruri hai
+
+       Note:- yeh syntex nu yad nhi karna use tools chatgpt internet ...
+       
+        2) Outline :- yeh border ton tori alag haii
+        border under hunda hai outline means outline baher hundi hai outline .. 
+
+        outline space nhi layndi hai yeh box model da part nhi hai .. 
+       --> 
+
+       <div class="box">I am box</div>
+       <!-- now step 1) main is div box nu shadows dena chahuda han .. 
+        use ;- box-shadow: 7px 13px 20px 0px rgb(117, 75, 20) yeh syntax rattne di jarurat nhi use internet 
+
+       here is some properties of shadow 
+       i) horizontal offset , vertical offset :- means shadow kini door hovegi 
+       
+       iii) blur :- jitni value doge ona he shadow blur hovgi 
+
+       iv) spread :- is say shadow ka size badda yan
+       chota karta hai..
+
+       v) color :- shadow da kiya color hoga .. 
+       vi) inset  :- shodow kini ander chaahie is nal set kar sakde han..
+       
+       step 2 ) class box main box-shadow property ka use karo .. with px values and color values
+
+       step 3 ) changes nu dekhn lyi inspect mode ch jaoo...
+      
+       step 4 ) use outline property 
+       step 5 ) use ouline-offset :- is nal outline di doori vadda-gatta sakde hann..
+       border di doori nu nhi vadda sakde (go in inspect mode )
+       outline di width change nhi kar sakde ..
+       
+       step 6 ) border-radius 0px :- border nu curve karn liye , outline nu nhi kar sakde pr outline border nu follow kardi hai use this border property ...  
+
+       
+       -->
+       <br>
+       <div class="box1">
+                        i am also a box 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque dolorum, laborum non ea quam earum perspiciatis, odit impedit eligendi culpa dicta accusantium consequuntur esse distinctio commodi eius, quod illum.
+       </div>
+ 
+       
+</body>
+</html>
