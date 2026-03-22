@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity & Cascade </title>
+    <style>
+        /* the specificity of this element selector is 1 */
+        h1 {
+            /* color: burlywood; */
+            color: burlywood;
+            color: lightblue important;
+        }
+
+        /* the specificity of this class selector is 10 */
+        .Color1 {
+            color: bisque;
+
+        }
+
+        /* the specificity of this class selector is 10 */
+        /** complex selectors specificity calculation   just add the values of the selectors  h1    ( is element selector have 1 point and     .Color3 is class selector and the class selector have 10 point  10+1=11 this selector is more specific then others now ..     )       **/
+        h1.Color3 {
+
+            color: darkcyan;
+            /** color: blue ; **/
+
+        }
+
+        /* the specificity of this class selector is 1 */
+        .Color2 {
+
+            color: rgb(167, 156, 10);
+        }
+
+        /* this is attribute selector */
+        /* the specificity of this attribute selector is 10 
+       
+        [data-x="color"]{
+            color: brown;
+       
+            }
+        */
+        /*
+        h2{
+             background-color: rgb(44, 101, 187) ;
+        } 
+
+        */
+
+        /* jado specificity score same hove tan jo sab to neche hai us di us selector so property applied hovegi ... */
+    </style>
+    <!--  what is it that is deciding which color, which conficting property will be applied so here in Css there is an algorithm which is called Cascade algorithm css stands for cascading style sheets and to resolve any type of conficts css uses cascade algorithm this algorithm determines which property will be applied in css and which one not be applied .
+       
+       there are 4 fules :-
+       1) position and order of appearance is important. 
+       ( ager mane kisi bhi cheej nu bad ch rahkya aa tn oh applied hovegi for ex:- mere is code ch ma .color3 class nu bad ch dita tn us de property applied hovegi or ager change karuge tn us di property apply hovegi jis nu late ch dita hove ga.. try with other class with  different property, ager same selectors use kita hain jive mere tino he class selectors han ... tn ehna vicho jo late ch hovega us di property apply hovegi.. )
+       
+       ager element selector yan koi or ek se jyada selectors use hove hain to specificity calculate hundi hai ...
+       2) specificity says which Css selector is the most specific 
+         inline selectors or inline style   (ab to vad priority diti jandi hai )
+         ID selectors                    (classes and attributes to vad priority )
+         classes and attribites          ( element selector to vad  )
+         element selector                 (universal selector to vad )
+         universal selector          low priority         
+         
+    note * :- gatt to gatt specific selector nu use karo why ? keoki us nu overwrite karna easy hovega .. ex:- universal selector nu element selector nal overwrite kar sakde han, element selector nu classes and attribute nu ID selector nal and ID nu inline nal pr ager inline nu change karna paygya tn problem hovegi ...       
+    note :- whatis attribute selectors see the code in body and style tag of attribute selector      
+       
+     3) origin :- if your Css is coming from your browser style because if you have not put Css in any element then the browser style sheet which is user agent style sheet (inspect and see!!)
+     yeh browser ne style add karye honge .. ager ham koi style add nhi karege to browser apne ap add karega ...
+     
+     4) importance :- if you have put important somewhere, then it will be the most important. if your put important then it will become very important and then it will have to be applied to Css .. means yeh inline styles nu ve overwrite kar sakda hai ... 
+      man nhi change kar paya important ki madat say inline selector koo
+
+       Specificity Calculation 
+       * universal selector = 0 point
+       * element selector pseudo elements = 1 point
+       * class , attribute and pseudo classes = 10 point 
+       * ID selector                         = 100
+       * inline styles                       = 1000   points
+
+       -->
+</head>
+
+<body>
+    <span>
+        <h1 " class=" Color1 Color2 Color3"> Css Specificity </h1>
+        <h2 class="Color1"> this is the important </h2>
+    </span>
+   <!--  important note make your webpages simple and avoid important and inline styles use ID and classes in css 
+     make things easy to understand other programers too ..   
+     -->
+
+</body>
+
+</html>
