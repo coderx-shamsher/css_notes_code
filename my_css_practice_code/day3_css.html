@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Css Selectors </title>
+    <style>
+        /*  this is selector
+        and in css use this type of comment 
+        
+        so ager main es type say selectors ban raha hun to ager mane ek div selector main ex;;- background-color red kiya hai or ma dusara div banna chahta hun to us ka background-color bhi red hive ga .. jo k manu sirf ek div ch he chaahie ... 
+        to is problem k liye classes k use to hai .. 
+        */
+      
+        
+        /* 
+          this is element selector 
+           
+        div{
+            background-color: antiquewhite;
+        } */ 
+
+        /*  use class with .class_name*/
+        
+         /* class_selector :- */
+        .background_color{
+              background-color: burlywood;
+        }
+        
+         /* ID selectors  
+         use # for ID 
+         */
+         
+         #color{
+             color: darkgreen;
+         }
+
+         /* child selectors 
+          ex:- ager main chahta hun k merr div element main jo p tag hoga uska color or background color change ho, ager direct child hai to property apply hovegi nhi tn nhi ... that's it.. pr ager p tag kisi div tag da descendant hai to use -
+         */
+         div > p {
+                 color:skyblue;
+                 background-color: black;
+         }
+
+        /* descendant  Selector
+        ex;- ager div ander p tag hai chahe kisi ve tag ch wrap hove kisi ve tag ch hove pr div they descandant nu property mil jyi gi ...
+
+        */
+         span p  {
+                 color: brown;
+                 background-color: beige;
+         }
+
+         /* universal selectors 
+         user ( * ) for amargin or padding ( sare elements bhot ek sath aaj jan gye ...)
+         see the different 
+         */ 
+         
+         * {
+             margin:0;
+             padding:0;
+         }
+         
+
+         /*  these are the most main used selectors 99% used ... */
+    
+         /* pseudo selectors */
+         /*  anchor tags visited hon te color change hove tn ma seudo selector da use karuga 
+         mere case mein offine hone pr yeh kam nhi kar rah keok mane google visite nhi key hai .... ppr hover kam kar raha hai .... 
+         a: link nal jo link visite nhi hoye yan jo bhi link a tag ch hovga usda coolor change kar sakde ho link  pseudo selector nal ....
+         */
+         a:visited{
+               color: rgb(74, 211, 230);
+         }
+         a:link{
+            color: rgb(107, 118, 119);
+         }
+         a:hover{
+                 color: darkgreen;
+         }
+         a:active{
+             
+             color: brown;
+             
+            }
+            /* hone k karna active bhi kam nhi kar raha  */
+          
+            /* the pseudo child selecotrs 
+            jahan p tag apne parent tag da first-child hove ga us te eh property apply hovegi ...
+            */
+            p:first-child{
+                 background-color:darkgrey;
+            }
+            /*
+            #id_{
+
+                background: plum;
+            }
+            */
+         
+         
+    </style>
+        
+</head>
+<body>
+        <br>
+        <br>
+         <span id="id_" >
+               <p>this is first child of pseudo </p>
+               <p>this is second child of pseudo </p>
+               <p>this is third child of pseudo </p>
+         </span>
+       <br> 
+      <br>
+        <div class="background_color"> this is div 
+
+            <!--  ager div ch main p tag nu kise hor tag ch put karda tn eh property apply nhi hovvegi ... -->
+              
+               <p>
+                 this is the div paragraph <br> 
+                 color changed using child selector 
+               </p>
+
+            </div>
+  <br>
+       <div >
+             this is second div element 
+       </div>
+       <!-- <br> -->
+       <p id="color">
+           this is text color using changed using ID selector in style tag  
+       </p>
+       
+       <br>
+
+       <span>  
+           <h4>this element use descandant selector </h4>
+           <main>
+                   <p>
+                       this is the div paragraph <br> 
+                        color changed using child selector 
+                      </p>
+    
+                </main>
+
+        </span>
+    
+        
+        <br> 
+         <a   href="http://google.com">Go to google</a>
+         <a   href="http://overthewire.org">Go overthewire</a>
+         <a   href="http://google.com">Go to google</a>
+        
+         
+         
+</body>
+</html>
