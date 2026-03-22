@@ -1,0 +1,87 @@
+<!--  There are three ways to add Css in html 
+1) inline Css
+             this is used in an html page using style attributes.
+
+2) internal Css
+                it means to add a style tag and place the html page's style within it. this cover in day1 in css 
+
+                this is most used one..
+
+3) external Css
+                it means to create a .css file and place all your styles inside that .css file 
+
+                
+                       
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Day2</title>
+    
+    <!--  internal Css using style tag in head tag .. -->
+    <!-- <style>
+        span{
+            
+           color: rgb(99, 148, 20);
+          
+        }
+        h2{
+            color: burlywood;
+            background-color: black;
+        }
+          
+   </style>
+    -->
+   <link rel="stylesheet" href="day2.css">
+   <!--  internal css is good but its ager 1-2 yan 10-20 element pr css karni ho koik hamri website small hai .. to internal css bhi karsakte hoo pr this is for small websites not for big web projects ... 
+     -->
+</head>
+
+<body>
+
+    <div>
+        <!-- this is inline Css kisi ek element main.. style attribute key madat se us element par css apply hojavegi .. us ek element pay..
+         inline css ko jitna na use karu unta achaa.. koik ager un 10-20 elements ko dubara change karna prda to ek ek element ko change karuge .. that's the point to strongly not use inline Css ...
+         this is not considered a good practice. -->
+        <h2> this is the 1st way to add :- </h2>
+
+        <h4 style="color: rgb(204, 204, 71);background-color:darkcyan">inline Css in html </h4>
+        <!-- <h4>inline Css in html </h4> -->
+        <p>
+            i am pentester !
+        </p>
+
+
+    </div>
+      
+     <span>
+         <!-- us nu day1 css file ch cover kita hai..  -->
+         <!--  style tag ko body main bhi use kiya ja sakta hi pr html structure maintain karne k liye ham ise head tag me lagyen to structure bahter hoga ... html ka ... -->
+         
+           <h2>this is the 2nd way to add Css</h2> 
+            <!-- <pre> 
+                this is internal css in html using style tag in the head tag 
+              </pre> -->
+              <p>this is internal Css ... 
+                <br> main p tag me br tag use kar rahan hun ...
+              </p>
+       
+     </span>
+ 
+     <br>
+
+      <pre>
+          <h3> this is external Css </h3>
+               this is the most used method to add Css 
+                
+      </pre>
+          <!-- ham ek file .css bankar sare css selectors or declaration us file mein set karege ..
+          i) use link tag to add external Css   
+          -->
+          <!-- <link rel="stylesheet" href="day2.css"> -->
+</body>
+</html>
