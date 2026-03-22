@@ -1,0 +1,81 @@
+<!-- Css Box model- margin, padding & Borders 
+Css main har cheej box hai, jo vi html ch elements hai oh sare box hai, chahe koi box hove div hove or span they all a box in our Css 
+
+lets see the concept :- 
+
+
+
+    -----------------------------------
+                Margin 
+    -----------------------------------          
+                Padding 
+    -----------------------------------    this is is border 
+               main content 
+              here is content   
+              
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Box Model</title>
+    <style>
+           
+        /* m:0 and enter or p:0 and enter .... shortcut   */
+           * {
+                margin: 0;
+                padding: 0;
+           }
+
+            .box{
+
+                background-color: rgb(33, 92, 94);
+            }
+            .box1{
+                color:lightcyan;                
+                padding: 12px;
+                margin: 10px;
+                border:2px solid black;
+                height: 200px;
+                box-sizing: border-box;
+  
+            }             
+            .box2{
+                   color: antiquewhite;
+                   padding: 12px;
+                   margin: 10px;
+                   border:2px solid rgb(130, 214, 240);
+                   height: 200px;
+                   box-sizing: border-box;
+                   box-sizing: content-box;
+
+
+
+            }
+    </style>
+     <!--  margin element de bahar lagdi hai .. element da backgound retained nhi hovega ..
+     see in inspect in webpage 
+     content de bahar padding lagdi hai .. so ager main padding kiti hai tn background color padding area  ch ve ayiga .. because padding is inside the content  and the margin is outside the content , outside the element content inside the element, background color padding area  ch rahega  not in the margin area 
+     padding content de ander lagdi hai ...   
+
+     note:- box-sizing: border-box means that the height of  my element the height i have written here this height is my border and padding i have written both of them together means by combining both of them 
+     content plus border plus padding should be 200 , when i say box sizing border box i am saying this .
+
+
+     -->
+  <!-- Margin collapse concept says that if the margin od two elements is overlapping then the maximum margin will be applied only once like if i hhave given a margin 10 here like if i give 10 margin in this and 10 margin in this what is the max of 10 and 10 ?  both are equal so 10 margin will be appled only once if make one of them 35 then 25 will be applied so this diffrence will be 35 ..
+   so this is called margin collapse ..
+   note :- jo margin jada hai ohh ek vari lag jye gi dona boxs de vich .... 
+
+    that's alll about today ...  18 feb 5:00 pm that's done ... read and practice much i can ....
+      -->
+</head>
+<body> 
+       <div class="box box1 ">I am box ...</div>
+       <!-- broswer default margin or padding karda hai ... -->
+       
+       <div class="box box2"> i am also box </div>
+
+</body>
+</html>
