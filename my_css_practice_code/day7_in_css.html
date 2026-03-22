@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+/**/
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizing Units </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* this is the root element .html is the root element or */
+
+        .html {
+            /**/
+            font-size: 14px;
+
+
+
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 4px solid lightblue;
+            /*width: 640px;*/
+            width: 80vw;
+            height: 80vh;
+            margin: auto;
+            /* width 80vw  kr k marign auto karne pr jo element hai vo center hogye ga .. keo k margin automatic lagegi ...  note :- ager element inline element hai to  hamm margin auto nhi laga sakte or na he width laga sakte hain is ko age dekhyege ... cover */
+
+            /* this is the px value of my monitor ..  ager height or with kisi monitor ki jyanda yan kyam hai to us case main yeh px unit main small size device pr yeh code theek say disply nhi karega us case main ham responsive unit ka use karte hain ..  ( vw -> viewport width apke device kye viewport jitni width yeh lega ..*/
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid brown;
+            width: 80vw;
+            /*height: 240vh;*/
+            min-height: 200;
+            min-width: 100vw;
+
+            
+            /** min-height for minimum height eni he honi chaahie pr max-height di koi limit nhi hai jina content add karo ge webpage adjust karega lets.. see -- 
+            min-height set kiti hai or min-width baki content de hisab nal height adjust  
+            **/
+            /* ager top-bottom or right-left ki margin koo alag alag karna hai to use space, here 20px is the top-bottom margin hai or left-right autometic set hogi .. this tip useful.. */
+            margin: 20px auto;
+            /** font-size: 20px; 
+            font-size: 12px;
+           
+            **/
+        }
+        
+        /*
+          .container p {
+        
+            font-size: 2em; 
+            font-size: 1rem;
+            
+            
+        
+            
+        }
+        */
+
+        
+        /*
+        2 rem da matlab jo root element da font-size hai us da 2 guna.. 2X mere case c root element hain html ager root koi hor element hove tn .. let's see .. so .html he only root element hai... in html   
+        */
+        
+        
+    
+        .other{
+             box-sizing: border-box;
+              border: 1px solid black;
+                background-color: burlywood;
+                color: darkblue;
+                width: 100vmax ;
+                height: 100vmin ;
+
+        }
+     
+        /* kuch properties inherit hundi hai Css ch font size unhna vich ek hai 
+       note :- em or rem is most important units to understand 
+        ager main container ch font-size 20px dita hai .. tn mere container de p tag de font da size uper vale container to inherit hovega jo key hai 20px , jo main container de font-size nu 1em kita hai ager us nu ma vada k 2em karda  tn ager uper container da font-size da jina size inherit hon vala c us da 2X means 20 X 2 = 40 or main uper change kiya hai .. 10 * 2 = 20  see the deffrence in the inspect mode in webpage .. that is the em
+
+        by defualt 16px font-size hunda hia ...  
+        or these are the most used once but two more vese tn bhot sari units hain ... 
+        1) vmin 
+        2) vmax 
+
+        sometimes what will happen is that your width will be greater the height.  but in the phone, your height is bigger then width is it not ? if you are in phone then your vmin will be be width
+        but if you are in computer  then your vmin will be height because height of monitor is small  but the  width of phone is small, ager main 100 vmin kardo to whatever is the minimum of height and width so if this is minimum and this is 100 and if this is minimum then this... lets code it ..
+
+        so mere is device mere pc ch vmin hai height or ager koi phone hai tn us ch vmin hai width 
+        jo cheej jis device ch chotti hai oh vmin ch ayegi mere is device ch vmin or vmax same hovegi ... 
+
+        these are the most used units .. in the web_dev
+
+      note:- min-height or min-width or max-height or max-width 
+        
+
+        
+    */
+
+    .foot{
+        box-sizing: border-box;
+        border: 1px solid cornflowerblue;
+        width: 99vw;
+
+    }
+    </style>
+    <!-- whatis px ? pixels are units that i used here is there a unit called  pixel only or not ? we have many units to use in CSS. You can use any kind of unit and which unit to use when, it will depend on what you are doing,
+     vw for width  or vh  for height    
+     other improtant unit  is em or rem 
+     
+     -->
+</head>
+
+<body>
+    <div class="box">
+        this is box
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi doloribus eius odio culpa reiciendis, libero
+        adipisci ex nam alias, rerum nobis quisquam necessitatibus repellendus neque exercitationem nisi corporis unde
+        numquam!
+
+    </div>
+    <br>
+    <!-- <span>
+          this is not box
+    </span> -->
+    <div class="container">
+        this is also box
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique tempore optio culpa, consectetur, assumenda
+        in iure ipsum ducimus voluptatibus beatae voluptatem. Rem optio blanditiis impedit neque quidem incidunt dicta
+        illo?
+        <!-- <p>
+            this is paragraph
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias iusto libero obcaecati ipsum vero
+            asperiores blanditiis nemo eius praesentium. Asperiores cupiditate libero tempore consectetur, ad, quos enim
+            saepe excepturi esse dolorem eveniet quisquam harum, dignissimos qui nulla perferendis eum accusamus?
+            Repudiandae ab vero temporibus deleniti reiciendis adipisci voluptas eligendi. Numquam, architecto
+            excepturi. Blanditiis deleniti asperiores minus?
+        </p> -->
+
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, debitis odio laborum dolorem iste maiores ducimus corporis dolore nemo officia minima. Labore repellendus necessitatibus et, autem ut expedita, quisquam, unde doloremque sint alias quam at hic explicabo voluptas! Ad exercitationem esse repudiandae incidunt est mollitia recusandae facilis fugit voluptatum fugiat autem doloribus dolores tempora, doloremque blanditiis similique magnam dignissimos necessitatibus? Amet autem asperiores, nulla fugit sequi impedit et ipsa accusamus, fugiat accusantium nobis aliquam ut voluptas exercitationem laudantium aperiam vero omnis quam nesciunt, aut unde deleniti maiores! Harum deserunt recusandae tempore laborum qui, id, ratione unde cumque sequi nisi, neque consequuntur cum? Dolorem tempore ullam, sint similique quas repellendus officia. Officiis explicabo voluptatum dolor dicta ducimus tempora aut? Placeat aliquid modi corporis dicta excepturi repellendus libero? At doloribus eum maxime explicabo, voluptates similique facere laborum aperiam quibusdam odit neque veritatis nulla numquam in quisquam tempora iure architecto tenetur eius? Iure ab nemo quo explicabo quos vitae, placeat error, sed laboriosam mollitia similique consequuntur. Voluptas, ipsam rerum. Exercitationem voluptate ea nesciunt fuga adipisci architecto possimus beatae veniam, necessitatibus nostrum asperiores ex fugiat tempora, cumque ipsa quaerat impedit eligendi labore quos a distinctio. Quidem iusto ut facilis officia iste rem nihil consequuntur et ipsum tempore alias eum tenetur, id perferendis assumenda repudiandae placeat aspernatur non a delectus consectetur odio, voluptas amet. Eaque nam ipsum possimus maiores adipisci vitae harum officiis nostrum molestiae sequi commodi nesciunt deleniti eum impedit, minus aut sapiente dolorum eius autem in ipsam aliquam. Quod perferendis tempora placeat, inventore modi illum a incidunt fugiat iste voluptate neque assumenda expedita doloribus aperiam! Pariatur mollitia eum maiores blanditiis odit libero excepturi aut dignissimos quasi consequatur. Cum recusandae dolorem possimus excepturi? Accusantium maxime pariatur repudiandae ducimus sint provident alias earum harum rerum aut! Aspernatur blanditiis minus earum consequatur explicabo, est quaerat quos expedita, sit cupiditate praesentium repellat accusantium dignissimos distinctio accusamus corporis veritatis minima iure nisi nam laboriosam quis eos laudantium? Quis minus dolorem veritatis rem! Sunt quibusdam magnam  recusandae, eum incidunt quo soluta eligendi fuga iure cum, quos dignissimos. Tenetur exercitationem beatae suscipit dolor in ducimus delectus molestias, saepe provident minima sapiente quod voluptatibus laboriosam nisi, doloribus numquam, a quidem reiciendis repudiandae ipsa nesciunt modi ullam. Sit consequuntur quaerat aliquam blanditiis ad beatae corrupti est dolore? Nemo assumenda necessitatibus iure officiis perspiciatis voluptatem omnis veritatis temporibus error optio, adipisci repudiandae repellendus minima, eum ad. Eum necessitatibus itaque earum iure qui provident mollitia! Explicabo obcaecati officia consectetur quibusdam nobis quia consequatur. Vitae, quo. Perspiciatis, eius doloremque! Molestiae architecto in expedita facilis iste, quae eaque doloremque voluptatum odit pariatur sit provident placeat dicta dolores, qui fuga perspiciatis possimus eum earum blanditiis fugit libero id officia aliquid? Modi molestiae aliquam laudantium architecto culpa hic corrupti nobis beatae alias rem porro autem dolorem illum eveniet iste sed a recusandae magnam, blanditiis dignissimos. Earum adipisci ea magnam corrupti eaque eveniet porro minus nam dolores odio.
+       <br>
+            <h1>this is other paragraph</h1>
+       <br>
+        <p>
+             <h1> this is paragraph</h1>
+             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id, doloribus fugiat nostrum, ea suscipit officia veritatis quidem debitis, sunt illo ratione cum dignissimos. Quasi fugit placeat necessitatibus possimus pariatur.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, rerum molestias optio natus modi consequatur accusantium, eveniet quisquam error molestiae temporibus incidunt velit placeat soluta minima, non autem. Impedit, quis qui aspernatur eligendi delectus id adipisci! Quisquam, placeat repudiandae eos quia ullam, sint labore excepturi quam quae, consequatur aliquam ipsam vero est eveniet esse. Rerum nisi porro impedit quaerat! Praesentium quisquam a saepe omnis rem necessitatibus! Harum accusamus velit facere minima cupiditate ipsum maxime. Distinctio excepturi cumque ducimus fuga voluptas aliquam laboriosam harum maxime modi animi vel delectus commodi qui optio, molestiae unde recusandae asperiores exercitationem omnis veritatis culpa iusto voluptatibus? Perspiciatis explicabo animi nisi deleniti quaerat ratione cum modi tenetur odio facilis? Ad dolor numquam commodi error dolores ducimus quaerat odio consectetur quasi laboriosam veniam incidunt, a itaque eum atque exercitationem nulla!
+        </p>
+
+    </div>
+    <br>
+    <div class="other">
+        <br>
+        this is another container <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni, cumque distinctio molestias sed consequatur.
+        Facere fuga magnam suscipit ut totam accusantium voluptate repudiandae explicabo, delectus harum, eum temporibus
+        maxime?
+    </div>
+    <br>
+    <div class="foot">
+          this is Footer here
+    </div>
+</body>
+
+</html>
