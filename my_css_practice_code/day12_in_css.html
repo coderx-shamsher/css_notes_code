@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position in CSS</title>
+    
+    <style>
+        .box{
+              /* common class */
+              height: 44vh;
+              width: 44vw;
+              margin: 4px;
+              padding: 4px;
+              border: 2px solid lightseagreen;
+  
+          }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        .box1 {
+            background-color: burlywood;
+            /*
+            
+            position: absolute;
+            top: 0px;
+            */
+            
+            /*
+            position: sticky;
+            top: 0px;
+            height: 22vh;
+            width: 81vw;
+            
+            */
+
+          /* now yeh box ek nav bar vangu behave kar reha hai it used as nav bar 
+          jo taak is de parr scroll nhi kra ge eh normal comm karega 
+          jdo neche nu scroll kita tn eh chipak jayega .. 
+
+          * /
+
+        }
+
+        .box2 {
+            background-color: cadetblue;
+        }
+
+        .box3 {
+            background-color: darkgreen;
+            /*
+            position: relative;
+            top: 44px;
+            
+            */
+            /* yeh box ek fix add template vangu hai jis de webpage te hundeya ve ase scroll kar dake han pr uh add template nhi hatda like that eh ek fixed box hai  */
+            /*
+            
+            position: fixed;
+            top: 0px;
+            right: 13vw;
+            */
+            
+
+        }
+
+        .box4 {
+            background-color: dodgerblue;
+        }
+
+      
+
+        .main {
+
+            /*
+            margin: 83px;
+            padding: 33px;
+            
+            */
+            border: 3px solid slateblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--  position property is very important !!! 
+      
+      1) create 4 div box's  
+      2) add some css in box class , border margin padding and h and w 
+      3) add create box1-box4 class and add background color different 
+    
+      :- Position is property in Css , ehh by default static hundi haii.....
+      static means is te top,bottom right left or z index nhi lag sakde ..
+      ager apa top 2px set kariye tn broswer (in inspect mode ) sanu dsse ga k position nu static to hatta k asii top-bottom etc set kar sakde han ..
+      
+      :- two type of positions ;- 
+      relative and absolute
+         relative:- means hamm top-bottom set kar sakde han .. 
+         4)add in 3rd box relative property  
+          do this work in inspect mode 
+          add position relative and then top 44px , now is nu increase decrease karn te box uper yah neche hovega see in the broswer ..
+          baki kise we element nu koi effect nhi hovega ..
+          apa left to we set kar sakde han .. 
+          left : 44px 
+          and see ...
+          ager ma mere box2 ko box3(jis par position relative lagayi hai )they uper karna hain to muje pahale box2 main position set karni hogi fir main box2 main z-index nu 1 set karuga tn neche vala box uper aajavega ...
+          do in the inspect mode  
+
+          now position absolute :-
+          5) create main div , or baki div us de ader kar do ...
+            and main class ch css add karo border and margin and padding etc 
+         
+            6) add position absolute in box1 and top 0 px 
+              es nal eh box uper chala jvega pura nal lag javega uper see in the broswer 
+              eh nearest positioned ancestor de nal lagda hai jive k apa dekhya k box1 , na tn main div keokey us kol koi position set nhi c oh static c, fir is ne body tag ch find kita position nhi mili tn html keokey html to uper koi hor element nhi c tn eh html de relative he lag gya as you see.. 
+              positioned means position static na hove .. 
+              age top increase kro ge tn tora neche avega ..
+              ager left right add kro tn ve position new set hovegi.. 
+              ager left 0 karo ge tn left html de relative 0 hovega left vall nal lagjavega .. 
+
+              ager left right increase karoge tn us to door hovega ..
+              :- so position absolute apna nearest positioned element find kardi hai, jdo mil gya tn us de relative he uh top,left,right,bottom etc set hovega .. 
+              
+              or next property is fixed
+
+              note:- ager transform, filter, or perspective property lagi hai tn ve element nu positioned mannn liya jyega .. 
+              means for ex mere main div ch kager uper valiya tina cho koi ek property ve lagi hovegi tn us nu positioned mann liya javega or top-left-right-bottom etc us de relative he lagega.. 
+              eh property nu mind ch rakhna .. eh 3 properties ve as positioned defineded karva sakdiya haiii... 
+              
+              that's all about today.. :- 11 march 25 
+              time :- 10.42pm 
+                                lecture is done //// .... ///// 
+                                
+
+
+
+  
+
+
+
+
+      
+      -->
+    <div class="main">
+        <div class="box1 box "></div>
+        <div class="box2 box "></div>
+        <div class="box3 box "></div>
+        <div class="box4 box "></div>
+
+    </div>
+</body>
+
+</html>
