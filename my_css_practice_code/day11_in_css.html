@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title> CSS Overflow Property </title>
+    <style>
+        .box {
+            height: 30vh;
+            width: 44vw;
+            border: 2px solid blueviolet;
+            overflow: hidden auto;
+            /*
+            overflow: auto;
+            white-space: nowrap;
+            overflow and text-overflow alag hain ..
+        text-overflow: ellipsis;
+        
+        */
+
+
+
+        }
+
+        /*
+           white-space: nowrap , property da use hund hai ager scroll bar ch text neche nhi vaega .. means horizontically text ek line ch rahega and text neeche nhi avega ..
+           another property is :- test-overflow:ellipsis
+           is nal text the end ch ... aa jande han 
+           overflow: hidden bhi same as ellipsis 
+
+           overflow nu x or y de nal ve set kar sade hain like: - 
+           overflow auto hidden ; this means overflow x ch kardo auto or y ch kardo hidden 
+           overflow hidden auto ; this means overflow x ch kardo hidden or y ch kardo auto 
+           see the code with broswer preview ...
+
+            
+           */
+    </style>
+</head>
+
+<body>
+    <div class="box">am box Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste molestiae magni ad
+        voluptatibus sit ratione, alias delectus sint repellat voluptas accusamus! Animi quis laudantium assumenda neque
+        officia doloribus. At suscipit, facere ut neque iure sunt quos praesentium pariatur maiores nam alias libero eum
+        corrupti corporis!</div>
+
+    <!-- 
+      1) create div.box and give height and width and border and in div give lorem text 
+
+      2) open preview or live server 
+      now see the text is overflow .. 
+      hun text overflow kar reha hai tn kive fix kita jave ?? 
+      is nu fix karn de two ways hain ..
+             i) use overflow property in style css (overflow : scroll or auto )
+              scroll karn nal ek scroll horizental bar avega jis nal text overflow nhi hovega ..
+              see in the broswer 
+            ager auto use karde han tn , jado text overflow karge tn us case ch scroll bar avega nhi tn nhi avegaa.. 
+       
+            that's  all about today topic ... 
+            today :- 11 mar 25 
+            time :- 9.10pm
+             
+      -->
+
+
+</body>
+
+</html>
