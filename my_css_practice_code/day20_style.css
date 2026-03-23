@@ -1,0 +1,85 @@
+.container{
+     border:2px solid rgb(2, 24, 24);
+    background-color: rgb(24, 100, 75);
+    width: 50vw;
+    height: 40vh;
+}
+.box{
+     border: 1px solid rgb(48, 28, 66);
+     width: 30px;
+     height: 30px;
+     background-color: bisque;
+     /* transition property nu direct na learn karna .. just learn 4 properties :- 
+     1) transition-property: ; 
+     2) transition-duration
+     3) transition-timing-function: 
+     4) transition-dalay: 
+     
+     
+
+
+     */
+    /**  transition: ch jis property ch transition lagvana hai,, for exp- main transform ch lagani aa , ek to jada properties te ve transition laga sakde haan **/
+     /* transition: transform ; */
+     /* transition: transform, background-color ; */
+
+          
+     /*** transition-duration: , jine seconds lyi transition chalani hai .. main 4s 4 seconds  ***/
+     /* transition-duration: 4s; */
+
+     /**** transition-timing-function bhot sare functions hunde han for exp- main ease-in-out use karna hai  ****/
+     /* transition-timing-function: ease-in ; */
+
+     /***** transition-dalay kine secondd ban suru hove ??    *****/
+     /* transition-delay: 4s ; */
+
+
+     /* now go in inspect mode or  transform property nu hat do and wait or box move karega ...
+     do properties transition ch den to band inspect ch jak jado tran class nu hattoge tn animation hovego class addd karo ge tn animation hovigi .. 
+     
+     >>>but transition: all or mutiple bhi kar sakde ho..
+
+     >>> now timing function go in inspect mode and see the transition-timing-function ,,, 
+    and see the all transitions in devtool means inspect mode .. 
+    
+     1) linear 
+     2) ease in out
+     3) ease in 
+     4) linear out , slow in 
+      or you can make your own .... 
+      just make changes in function or copy the new function syntax and paste in code and see the magic ..
+     hor ve bhot tools hi animation bana de but devtool is goood 
+
+
+     
+     
+     
+     */
+     /* >>>>  now te shorthandd property   */
+     transition: all 3s cubic-bezier(0.38, 0.35, 0, 0.59) 2s ;
+      
+     
+     /*  ager or help chaahie to hover on property (transition) and go on MDN reference to check more help  
+     
+     so syntax is nerver  priority just understand te conpect 
+
+     
+     */
+
+}
+
+.tran{
+    transform: translateX(10vh) translateY(10vw) scale(2.2);
+    background-color: rgb(24, 114, 197);
+}
+
+
+/* that's alll about transition property ... 
+ 
+ 
+Today lecute :- 23 march , 25 
+
+done on 3.36 pm ... 
+
+
+*/
