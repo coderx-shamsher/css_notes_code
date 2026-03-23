@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container{
+              border: 2px solid black;
+              /* first is display grid
+              grid ch columns nhi hunde pr apa grid di properties ds use karke columns set kar sakde han ... 
+              using grid apa define kar sakde han colomns nu 
+
+              2) maine 2 colomns define kite ek 100px da dusra 120px da 
+              
+              grid  ch items nu kisi ve jagah palce kita ja sakda hai .. 
+
+             now muje  3 rows chaaihe or mai define kar sakda han .. 
+             rows set karn ton bad main mere ek item nu pahale vale di jagah te set karna hai tn main ek item-6 naam di class bana k us ch :- 
+                      grid-row: 1/2;
+                      grid-column: 1/2;
+            
+             hun main ek class nu item number 6 nu assign karaga ...tn 
+             eh box  , box number 1 nu push kark us di position ch set ho jyega ...
+             ager main chahunda han k ma dona nu ek position ch rakha 
+             means overlap karkey .. 
+             tn ek class nu box number 1 ch ve assign kardo ...
+             
+             now overlap dekhn nu milegga ... 
+              
+             note:- items autometically place honge .. pr ager kise ek item nu set karna hai tn grid-column or row di help nal karde han ... 
+
+
+
+                     
+
+
+
+              */
+              display: grid;
+              /* rows and columns ko names de sakde han ... use this syntax :- [pahala] sizing unit [dusra] sizing unit */
+              grid-template-columns: [pahala]100px  [dusra] 120px ;
+              grid-template-rows: 100px 100px 100px;
+           
+            /* now use this names in grid rows and columns */
+              
+
+         }
+       
+         .item-6{
+
+            /* means row or column ch kis number to kis tak space layni hai 
+            
+            grid-column: 1/2;
+            grid-row: 1/2;
+            */
+            /* same thing with different method */
+            
+            color: blueviolet;
+            
+            /* same ham grid row ki start and end define kar sakte han  
+            short hand 
+            */
+            grid-row-start: pahala ;
+            grid-row-end: 3;
+
+            /*  same with column
+            yeh [dusra] say suru hoga or 4 tak di puri width lyega ..
+
+            
+            */
+            grid-column-start: 1;
+            grid-column-end: 5;
+           
+            /* 
+                >>>>>>> important notes here :-- <<<<<<<<<<
+                         
+            note:-  ager koi row 1 to suru ho k 4/5 lets use as example , tn oh box or items 1 to 5 tak de items di width lave ga ager items class cho width nu hata ke dekho tn inspect mode ch ... 
+              
+            note ;- ager rows and columns cho koi ek cheej ve define kar te tn dusari cheej apen aap set hovegi :- exp - ager rows 3 hain tn 2 columns bannge autometically ....
+            
+            es to bad kisi particular item nu rows and columns nal kisi vi place ch set kar sakde hoooo ... that's the basic grid ..
+
+            that's the way one 
+            for second way to use grid :-
+            1) make new file 
+            
+
+            */
+
+
+         }
+         .item-1{
+            grid-column: pahala/3;
+            grid-row: 1/2;
+            background-color: lightcyan ;
+         }
+         .items{
+                border: 2px solid  seagreen;
+                height: 30px;
+                width: 30px;
+
+
+         }
+    </style>
+</head>
+<body>
+     <main class="container">
+         
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items item-6">6</div>
+
+     </main>
+</body>
+</html>
+
+
+
+
