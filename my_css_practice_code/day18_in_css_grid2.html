@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* grid template areas 
+         har ek area nu name de do ..
+        
+         1) container ch display grid dena 
+
+        */
+
+        .container {
+            border: 2px solid slateblue;
+            display: grid;
+            /* use this syntax to naming the areas in grid ..
+            
+            grid-template-areas:"nav  nav  nav "
+            "side article article "
+            "footer footer footer"
+            
+            ;
+            */
+
+            /* fr unit using in grid  1) give width 
+            2) grid
+            */
+            width: 80vw;
+            height: 70vh;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            /* ager ek to jaadaa rows and columns banne hai tn use repeat() function here
+            grid-template-rows: repeat(4, 1fr);
+            
+            other is minmax() functtion ,means minmum kini width set karni hai ir maxsimum kini 
+
+            minmax() function bhot useful hai kite ve use kr sakde han .. 
+
+            grid-template-rows: repeat(4, minmax(100px, 1fr));
+            */
+            
+            /* main 1fr 2fr 1fr 1fr kar ta tn 2fr vala block 2X space lyega .. 
+      rows or columns dona te use kar sakde han ... 
+      */
+
+            /* and mere 4 columns ban jange with 1-1 fraction of full width  see in broswer */
+      gap: 22px;
+      /* that's how  we can set items , items nu set karna kise ve place ch using these properties .. 
+      
+      justify-content: center;;
+      justify-items: baseline;
+      align-items: center;
+
+      ager justify content or align content nu ek saath center etc kaarna haai tn use :- 
+
+      place-content: center 
+
+      */
+      
+      /*
+      >>>>>>  *** improtant note here ***  >>>>>>>>
+      align content or justify content ado use kari hai ;- jado container vada hai grid choti hai means items in container 
+      
+      justfiy items or align items yeh specific cell ch use hunde han .. 
+      */
+      place-content: center;
+    }
+    
+    
+    
+    
+    .items {
+        border: 1px solid lightseagreen;
+            height: 40px;
+            width: 42px;
+            
+            /*
+             
+            
+            */
+        }
+        
+        /*
+        .item-1{
+            
+          in items " " use nhi karne use name of the area as it   
+         
+          grid-area: nav;
+          background-color: burlywood;
+        
+        }  
+          
+        .item-2{
+            grid-area: side;
+            background-color: cornflowerblue;
+        }
+        
+        .item-3{
+            grid-area: article;
+            background-color: cadetblue;
+        }
+        
+        
+        or ager koi last ch ek items bacya hai .. or us nu main nav yaan kise hor area ch overlap karvana hai tn oh ve kar sakde han .. 
+        
+        
+        .item-5{
+            grid-area: footer;
+            color: beige ;
+            }
+            
+            
+            */
+            .item-4{
+                /*
+                background-color: darkblue;
+                grid-area: footer;
+                */
+                justify-self: center;
+                align-self: center;
+
+                /* yeh property individuaal cell ch lag rahi hai .. keep in mind 
+                flexbox ch flexbox de acording lagdi hai grid cch cell de according .. 
+
+                */
+                
+            }
+    </style>
+    <!-- 
+          that's alll about grid but one unit more here 
+         **>> fr unit :- ager mere mmain container di width vw unit ch hai tn jdo maii 
+         1 ) phala container grid nu width set karo 
+         2) grid-template-columns: 1fr 1fr 1fr ;
+
+         ager width 80vw tn es de 3 hisse honge (1fr 1fr 1fr ) , ek hissa = 1fr ..
+         
+         ( 1fr means fraction of full width yeh specifically grid cch use hundi hai )
+        
+          
+         **>> use gap property to give gap in items 
+          row-gap or column-gap alag set kar sakde han ..
+          note:- dont use padding in flexbox or grid maine use gap ..
+
+          now ager main sare grid items nu center karna chahunda han tn use :- 1) justify-content: center
+          use this in container 
+
+          /* ager kisi partiular item te apply karni hai tn use 
+          justify-self: 
+          or  
+          align-self:
+          */
+          use this property in item class 
+
+ -->
+</head>
+
+<body>
+    <main class="container">
+
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <!-- <div class="items item-5">
+            <h1> this is overlaped  item number 5 </h1>
+            <p>this is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur amet veniam, doloremque asperiores voluptas labore placeat distinctio pariatur, ducimus similique quis dolorum illo nesciunt in nulla repellendus ipsam architecto corporis, officia dicta laborum minus iste? Rem, quo cum aperiam amet obcaecati cupiditate laudantium quod repudiandae.</p></div> -->
+
+ 
+    </main>
+   <!--  that's all about grid see if any confusion 
+     
+   today date ::- 20 march 25 
+   time :- 9:45 pm lecture is done !! ........ 
+   
+   -->
+</body>
+
+</html>
