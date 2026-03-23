@@ -1,0 +1,103 @@
+.box{
+    width: 40px;
+    height: 40px;
+    border: 2px solid slateblue;
+    background-color: aquamarine;;
+   
+    /* 1) :- transform: rotate;- aager main es box nu degrees ch rotate karna chahuda han , ex 50deg, deg use  hhunda hai .. rotate function ch  
+    
+    note :-  kuj ve set karo for exp, main 90deg set kita pr main inspecct mode ch jake .. es nu gui mode ch set karda ... go inspect mode .. 
+
+    display: flex; karna nal flexbox properties nu use karsakde han  
+   
+    justify-content: center; box ch jo content hai us nu center karna (default ch en left ch set hunda hai  
+   
+    align-items: center; ehh default ch uper nu set c es nu center kita .. 
+     
+
+
+    
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* main deg unit use kar sakda han es nu rotate karn lyi , but ek hor unit use hundi hai called turn (0.(n)turn , exp;- (0.25turn) syntax like that ... */
+    /* transform: rotate(50deg); */
+    /* transform: rotate(0.25turn);  */
+    /* 0.25turn means 90degree , 360degree ek turn hunda hai .. 
+    ager main 0.5turn kar du to yeh 180deg rotate hoga and one turn means it rotate it once and keeps it back means 360degree rotation if turn it 5 times, then you know it will rotate at 180degree  and 1 turn means it will rotate 360deg 
+   
+    */
+
+    /* or ham 3 axiss main ise rotate kar sakde han  x y or z har axis de rotation check karni hai tn better is go in inspect mode ..... */
+    /* transform: rotateX(40deg);  */
+    /* transform: rotateY(60deg);  */
+    /* transform: rotateZ(50deg);  */
+        /* Z axis screen de ander nu ja rahhi hai ..   */
+    
+    
+    /** scale()   
+    eh 1.6 times increase karega size .. 
+    
+    **/
+
+    /* transform: scale(1.6); */
+
+    /*** skew property 
+    skew means dona coners ton lak kichya hove neche nu .. 
+    
+    skew X y ch hhunda hai z ch nhi hunda 
+
+    ***/
+    /* transform: skew(5deg); */
+    
+    
+    /**** translate , this is most commonly  used property   
+    /* transform: translate(33px);
+    X Y Z or 3D use kar sakde han 
+
+    
+    transform: translate(100%);
+    transform: translateX(100%); 
+
+    33px ch translate karn nal eh agee nu chala gya ,, ager main % ch karaga tn width di n% translate hovegi ..    
+    
+    ****/
+   
+    /* jado ek ton jada transform properties lagani hove tn jus give spacees and define deffernet functions 
+    
+    transform: rotate(33deg) rotateX(40deg)  skew(33deg); 
+    
+    use inspect mode ..
+    */
+    
+/*****  transform origin  
+    default property 50 50 hundi hai means center 
+    
+ note eh ek advance concept hai katt use hunda hai .... 
+ transform: rotate(44deg);
+ transform-origin: 50% 50% ;
+    
+ 
+ *****/
+    /*  ager es nu 0 0 kaar do ge or inspect mode  rotate or transform origin nu change karo us nu gui mode h dekho kive work kardaa hai  .
+    ager origin nu increase karoge tn origin point ve hange hovega.. us de around he box rotate hovega ..
+    .*/
+     
+
+    
+/* download harry transform css code to better understanding ...   */
+
+
+
+
+}
+
+
+/* container class with css code  */
+.con{
+    width: 90vw;
+    height: 100vh;
+    border: 1px solid black ;
+}
