@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box in Css </title>
+    <style>
+        .container {
+
+            width: auto;
+            height: 100vh;
+            border: 1px solid black;
+            display: flex;
+            /* 
+              
+              align-items: center;
+              justify-content: center;
+              flex-direction: row;
+              */
+
+
+
+            /* ager items overflow kar rahe hai tn use this property 
+              ek wrap-reverse ve hunda hai use this and see in broswer ..
+              flex-wrap: wrap-reverse;
+              */
+            /* and see the difrerence ... in broswer .. 
+             flex-wrap: wrap; 
+              */
+
+
+
+            /* 
+               align-contant, ager one line of items hai tn align-items use karna ager more then one lines hai tn align content center tn sariya items center ch aa jangiya jo space ch wich oh set hojavegi .. 
+               use this  
+               align-content: flex-end;
+              */
+
+            /* so we can use flex-flow : flex-direction or flex-wrap or unwrap */
+            
+            
+            /* short hand shortcut
+            flex-flow: row wrap;
+            */
+
+            /* ek hor property hai gap    
+              es nu use kar lyi pahal items cho margin or ager padding diti ha remmove karo ,
+              gap property use karn nal items de vich da gap set hunda hai varitically or horizontically 
+
+               ager gap remove karo ge tn items apas ch nal nal aa jange .. 
+              ham row or column gap alag alag set kar sakde ha using row/column-gap property ..
+              
+              gap: 10px;
+              row-gap: 4px;
+              column-gap: 4px;
+              */
+
+            /* short hand shortcut 
+            pahal row gap then column gap thats 
+            */
+            gap:8px 10px ;
+   
+            /*   or that's all the properties of container yad rahe yeh container di properties items class ch nhi lagani or items class di properties container class ch nhi laganii ..
+            
+            */
+
+            /* order property in items 
+            jis da order (ittems) javda hovega .. uh last ch avega .. jis da order sb to gatt hovega uh pahala avega .. 
+            
+            main 3 classes banaiyan  
+            1- order 1 
+            2- order 2
+            3 - order 3
+
+            or hun main eh class jis ve item nu assign karuga us da order es class de order property de anusar set hovega chahe mai vade number means ager mere kol numaric data items hai tn ,, vade number nu jo key 100 ho sakda hai order1 class assign karn te pahala liya sakda han ...  let's see how ...
+          
+            now main 100 number box nu order1  class dy diti or yeh pahal aya or main baki (1 2 3 ) nu order10 vali class diti or pahala 
+
+            100 fir 1 fir 2 fir 3 
+
+            jina order jada ona badch jjina gatt on pahala ..
+
+            
+            */
+
+
+
+
+        }
+
+        .items {
+
+            /* yeh sare items ch flexgorw nu 1 set kar devega default yeh 0 hundi hai ... */
+            flex-grow: 1;
+            height: 30px;
+            width: 30px;
+            background-color: cornflowerblue;
+            /* 
+                margin: 2px;
+                */
+            color: aquamarine;
+           
+            /* flex-items properties */
+            
+        }
+        .item{
+            
+            /* all items ch flex-grow set kar to bad ager main 
+            ek particular item ch flex-grow nu 2 set karde han tn hun eh ek item 2 items di space lavega baki sare 1 1 di space lay rahe han .. 
+             ager inspect ch ja k is nu vada k dekho ge tn eh jada space lyeha bakiya de mukable ... 
+             so that's the flexgrow 
+
+             flex-grow:2 ;
+            */
+
+            /* flex-shrink
+            flex-shrink means item shrink means chota hove ha bakiya de mukabele .. ,, kado 
+            pahala flex-wrap hata do and fir apply karo
+           oh item oni speed nal shrink hovega jini value flexshrink nu diti hai .. 
+           
+           
+           
+           
+           */
+           flex-shrink: 4;
+           
+           align-self: flex-end;
+           /* is nal oh perpticular element nu asii flex-end, start or ve bhot property laga k set kar skde han means ager kisi particular item nu ager uper/neche set karna hai tn align-self property use hundi hai 
+           
+           
+           asi har perticular elements nu  alag alag set kar sakde han ... 
+
+           note:- maybe yeh properties :- flex-grow or shrink bhot bhot katt use hundiya hannn..... 
+        
+
+           that's alll about flexbox ....  
+           today  18 mar 25 
+           time :- 2.35
+           */
+           
+
+
+        }
+
+        .order1{
+            order: 1;
+        }
+        .order2{
+            order: 2;
+        }
+        .order10{
+            order: 10;
+        }
+    </style>
+    <!--  now yeh ab step one ch complete  kita  main tag ch ek div ch 4 hor divs banaye with class container and items 
+    or container nu  border dita or items ch height width  or background color set kita  or margin 
+    that the step one 
+
+    step 2 :- 
+       hun browser ch es nu view karna , hun mai nager mere boxs da direction change karna hai tn main yeh using row Css karna problem hai ,, pr using flexbox property yeh karna easy hai , using flexbox container class ch display flex karna , not on items , tn yeh flexbox banjavega or apa flexbox de properties nu use kar sakde han 
+
+       note :- by default flexbox items nu left to right kardinda hai using display: flex; 
+      
+    step 3 :- center the items using :   justify-content: center; 
+    to yeh mere boxes center ho jange .. .  
+
+
+    step 4 is and height and width in container ..
+    and then  align-items: center;   or height set karn nal sada container vada ho gya ho or then apa  align-items: center; kita k items center ch aa jan varitically centered ...  ... see different in browser .. 
+
+   note:- mostly yeh  properties he used hundiya hai ... flex, jusstify content center and align-items center 
+
+   or align-center diya kuj properties hai jo k ... go in inspect mode and see 
+   that's best way to see gui editing in css 
+   that's alll important or moslty used flexbox ... 
+
+   more improtant on flexbox ==>
+     jo default  flex direction hai or left to right or right to left ho sakdi hai ... es nu change kar sakde ha using flex-direction use this and then next ...>>
+     flex-direction: column karn te default row to items column ch aa jangiya ..
+     age column-reverse karage ton pahala 
+     add numbers in items divs 1-4 
+     and add color in items class 
+     hun jado apa view karde han tn in column direction ,
+     items box uperval 
+     
+         1   2   3   ..........
+     etc 
+     set honge but ager column-reverse kar dita jve tn yeh 
+       
+                              .............    3  2  1  
+                                            yeh pattren dekhan nu milye ga 
+     
+     now do same with row and row-reverse  ..... !!
+     see before and after these properties ....
+
+     flex-direction :- 
+            
+        this is the main axis
+        
+        >>flex-direction row  
+                  
+                 main axis
+                   |
+                   | 
+                   |
+ main start  |------------------- main end    
+             |                   | ------ cross start 
+             |                   |
+cross axis>  | 1   2   3         |
+             |                   |
+             |                   |
+             |-------------------| cross end 
+    
+      
+    note:- if flex direction is row then it which direction items are laying is main direction
+    jis taraff items da flow hai maean see the 1 2 3 
+      so that's the main axis 
+      and in which direction items are not layingis prependicular cross axis.
+
+      main axis or cross axis change karsakde han using flex-direction 
+        ager flex-direction column karda han .. 
+
+           >> flex-direction column
+
+    main start|----------------------=> cross axis 
+              |  1                   |  start here 
+              |  2                   |  
+              |  2                   |  
+              |  2                   |  
+              |  2                   |  
+ main axis    |  2                   |  
+              |  2                   |  
+              |  3                   |   
+              |  ....nth items       |  
+              |                      | 
+              |                      | 
+              |                      |
+   main end   ------------------------cross 
+                                       end here
+
+       
+        note:- justify-content: center , main axis nu dekh k items center  karda hai na k vertically or horizontically dekh k .. that's it .. 
+
+     
+        note:- see the daigram .... 
+
+
+    step 4:-  flex-wrap :- ager items container cho overflow ho rahe hai tn eh property use karo 
+    
+
+ 
+            
+
+   
+
+    -->
+    <!--  alt+shift+ downarrow  to replicate code !!  -->
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="items order2 ">1</div>
+            <div class="items order1">2</div>
+            <div class="items order10">3</div>
+            <div class="items ">100</div>
+            <div class="items item">22</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    </main>
+</body>
+
+</html>
