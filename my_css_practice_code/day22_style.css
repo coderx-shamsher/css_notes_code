@@ -1,0 +1,79 @@
+#main {
+    /* border: 2px solid black; */
+    /* background-color: rgb(39, 156, 156); */
+    width: 90vw;
+    height:100vh; 
+    background-image: url("2345247.jpg");
+    /* background-position: top right; */
+    /* background-position: cover; */
+    /* object-fit: cover; */
+
+/* ager ap background mai choti image lagate ho tn oh image repeat hovegi .. us nu solve karn ye use 
+repeat X or Y us kaarde hov ager repeat karvana hai tn ...
+
+*/
+background-repeat: no-repeat;
+
+}
+
+/* objectfit di defaut value fill hundi hai ... */
+.cover{
+    width: 290px;
+    height: 330px;
+
+    /* object-fit: cover ; */
+    /* object-position: top right; */
+    /* note:- apa eh define kar sakde han key jado image da portion cut hova tn kihra cut hove ..  top right  bottom right top left or bottim left .etc 
+    
+    use property :- object-position
+
+    note :- use inspect mode t custmize 
+    */
+    
+
+    /*
+     eh img element ch jo height or with diti hai us di gall kar rahe han us nu cover kar lye gyi yeh property .. 
+     tn eh image d aspect ratio maintain rakhde hove img box nu cover kar llye gyi ... 
+     note:- parent di height or width nal koi matlab nhi hai  img element ch jo height or width lagyi hai us nal matlab hai ... 
+     
+     tip:- parent di width or height same karo tn jo pta chalye k cover property kam kri k nhi .. 
+     yeh raito maintain karn lyi image nu cut kardi hai and parent container nu image cover kar lyndi hai .. 
+
+     */
+     
+   
+}
+
+/*  ager main chahunda han k image height or width contain kare bina image nu cut kite .. tn use contain property  */
+/* 
+.contain{
+       height: 230px;
+       width: 290px;
+       object-fit: contain;
+       
+    }
+       */
+/* us trah imaage ko  */
+/* 
+.cover_obj_position{
+    width: 290px;
+    height: 330px;
+    object-fit: cover ;
+    /* object-position: bottom left; */
+    /* object-fit: scale-down; 
+    
+    
+} 
+    */
+
+/* other one is scale down  */
+/*  hun es image nu dekhoge tn eh tori khrab  lag rahi hai ..
+keo key ager main us nu fit karna hai tn mnu us image da aspect ratio nhi pta or na he ma chahuda han key main us nu find karda rhan tn ek es problem nu solve karna lyi ek property hai ;- 
+
+>> object-fit: cover ;  means cover kar lo pure box nu .. pr parent box ch nhi jo ke mera main div hai .. ma us property nu img element ch lagya hai tn us img element ch mai jo height or width diti hai us cover kar lu ... object-fit cover property da he kam hai .. 
+
+
+*/
+
+/*  ham ek image ko as background use kar sakte han .. */
+
