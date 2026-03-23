@@ -1,0 +1,56 @@
+/* img{ */
+/*     
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center ; */
+
+    /* fiter: blur(2px) , is nal image nu blur kita ja sakda hai blur nu inspect mode ch ja k change kar skde ho... 
+    blur value px unit ch dena ...
+
+    filter: blur(10px);
+    */
+    /* 
+     brightness nu % ch dena ..
+    filter: brightness(100%);
+    
+    contrast nu 0-n tak vada sakde han or % ch ve values de sakde han ..
+
+    ek vari ch multiple property de sakde han ... 
+    filter: brightness(100%) contrast(100%);
+
+    
+    */
+    /* grayscale */
+    /* filter: grayscale(100%); */
+
+    
+
+/* } */
+
+.img1{
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center ;
+
+}
+.img2{
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center ;
+    /* is grayscale filter nal image nu black-white kar sadkde han ..*/
+    /* filter: grayscale(100%); */
+   /* filter: sepia(100%);  */
+   /* filter: invert(0.1); */
+   /* filter: opacity(1); */
+
+   /* these  are the filter to use set colors and other editing in css  there are not so used ..
+   
+   that's today .
+   date:- 30 mar 25 
+   time:- 11am.. compeleted... 
+   
+   */
+}
