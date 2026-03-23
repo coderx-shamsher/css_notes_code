@@ -1,0 +1,211 @@
+.container{
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid black;
+
+}
+
+.box{
+     border: 1px solid skyblue;
+     color: chocolate;
+     width: 40px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+     
+                           
+
+     /* >> Animation >> 
+     
+     animation: my_animation;
+     
+     apply animations using animation , using this reference see , kis jagah konsi property use karni haiii.. 
+    animations, transition vargiya hai pr animations ch bhot complex cheeja keytiya ja sakdiya hai.. 
+     
+     short hand property;- 
+     animation: name duration timing-function delay iteration-count direction fill-mode;
+     
+     */
+
+
+     /** << Animation-duration >>
+     animation-duration: 2s;
+
+       
+     es trah ve animation surur nhi hovegi see te other properties ve hai jo key bhot useful hai 
+     same as transition property, es ch ve duration property hai ... 
+
+     
+     */
+    
+     /* es nu repeat animation repeat nal repeat kar sakde han .. 
+     note :- use refrence ... yad rakhna jaruri ni hai tn use offfical documentations using MDN refrence
+     */
+
+     /* >>Animation-iteration-count>>
+     animation-iteration-count: 4; jine time lyi animations nu chalana hai  infinite ve kar sakde ho.. ager animation loop ch chalana hai ..  
+     animation-iteration-count: infinite;
+     */
+        
+
+    /** >> Animation Timing function >> **/
+    /* animation timing function by default functions  */
+    /* animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); */
+    /* new timing function by me .. */
+    /* animation-timing-function: cubic-bezier(0.19, 1.18, 0.87, 0.92); */
+   
+
+    /*** Note important >> animations or transitions cho kis  nu use karna , jado tori easy or simple properties te use karna hai ,, ager complex animations banane hai tn use animation property .... 
+    
+    transitions ve animations he create krda hai pr animation or transition properties alaag alagg  hai ..***/
+
+    
+    /* >> Animation Direction <<  vry important ,,
+          1) property is :- reverse 
+                tn pahala animation jis jagah ton suru ho rahi hhovegi us to ulti direction ch chalegi .. 
+   
+               2) alternate-reverse 
+                 use and see the deffrence ... 
+           
+               animation-direction: alternate-reverse;
+               animation-direction: reverse; 
+    
+               */
+
+
+
+    /*** <<< Animation-play state >>>>
+    ager kisi animation nu kise particular palce te rokna hai tn 
+    
+    animation-play-state paused use karna 
+
+    " eh sab js di help nal hunda hai .. 
+    eh sb transition property ch nhi kar sakde ..
+    
+    "
+    animation-play-state: paused;
+      
+
+    ***/
+    
+    /*  note:- animation short hand use karo dont memorize animation short hand 
+    
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+    */
+     
+    /* >>> 
+           short hand use here :--- 
+    animation: my_animation  2s ease-in-out 1s 2 backwards  ; 
+    
+    */
+
+    /*** <<< Animation-fill mode >>> 
+      1) give iteration-count ; 1
+       
+        2) in animation key frame  
+             from {
+                  es block ch background color set karo and pahlle vale nu hatta do pahal!!
+
+             } 
+                  to{
+                     set new background color 
+    
+       
+      forwords property  ;-                
+      now jado apa fill-mode nu :- forwords set karde an tn animation chalega or apni finally property retain karega ,,means animation jis jgah ruk gya us jagah he rukya rahega .... see in broswer ..
+      pahla nhhi kar reha c ...
+
+      backwords;- 
+          us nal jado animation end hovega oh vapis orignal start place ch aa jye ga ... 
+          use and see .. 
+
+     
+          note:- yeh property jada use nhi hundi bs pta hona chaahie .... 
+
+
+    ***/
+
+
+    /* how to add multiple animation ?? ;- use comma to separate ..
+    use this reference to understand this conpect .... 
+    animation: name1 duration timing-function delay iteration-count direction fill-mode,
+    name2 duration timing-function delay iteration-count direction fill-mode
+    ;
+
+    
+    */
+    animation: my_animation  2s ease-in-out 1s 2 backwards,
+       newani 2s ease-in-out 1s 2 backwards
+     ;
+
+     /*  note Css animation di help nal bhot kuj creative bnaya jaskda haii explore this ... 
+     
+     today :- 26 mar 25..
+     time :- 2..47 pm
+
+     lecture is done here .... 
+
+
+     */
+  
+
+    
+}
+
+
+/*  now main kuj animation add karna hai 
+Css ch animation add karn lyi keyframs da use hhunda hhaii .. 
+
+@keyframs identifier { } 
+
+identifier de jagrah koi ve name use kar sakde ho. just like variables ... 
+
+see my code 
+*/
+
+@keyframes my_animation {
+       from{
+                /* kis to suru hona   */
+               background-color: blue;
+        }
+        
+        to{
+            /* kis tak katam honaa   */
+            background-color: cornflowerblue;
+            transform: translateX(200px);
+
+       }
+
+    }
+
+
+/* we can make multiple animation without from or to
+    is val mai set kita k jado animation 0% hai tn key karna hai or 20% hai jado 50% hhai or 100% hai tn key karna hai ..
+
+*/
+
+@keyframes newani {
+       
+    0%{
+        transform: rotate(90deg);
+     }
+     20%{
+      transform: rotate(120deg);
+
+     }
+     50%{
+        transform: rotate(190deg);
+          
+     }
+     100%{
+        transform: rotate(220deg);
+         
+     }
+
+
+
+}
+
