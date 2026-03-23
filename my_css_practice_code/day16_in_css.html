@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css Selectors </title>
+    <style>
+        /* box de first-child te css apply hovegi 
+        jov ve parent da first child element hai us te eh css property apply hovgi .. 
+
+        .box:first-child {
+            border: 2px solid blueviolet;
+            background-color: rgba(57, 192, 192, 0.87);
+        }
+         
+        */
+        /* yeh box class ch har first line ch eh apply hovegi property */
+        /*
+        .box::first-line{
+            color: darkorange;
+        }
+         
+        */
+
+        /* yeh use karo ager ek container de sare elements nu ek vari ch target karna hai ...  
+         .boxes * {
+            color: burlywood;
+            border: 2px solid black;
+            }
+
+        */
+
+        /* attribute selector  jaruri nhi data attribute he use hove class or id lyi ve use kar sakde han .. 
+        1) ham grouping ve kar sakde ha n means group of elements nu using attribute selector css laga salde han 
+         
+        syntax is there ;- 
+        p , h , div .box #color [data-color="light"]{
+              color: chocolate;
+              margin-top: 22px;
+              padding: 22px;
+
+        }
+
+
+        */
+
+        /* 
+        p,
+        h,
+        .box
+        div [data-color="light"] {
+            color: chocolate;
+            margin-top: 22px;
+            padding: 22px;
+
+        }
+        
+        
+        */
+        /* yeh counting 1 to suru hovgi 1 2... nth elements , jo bhi odd elements hai ona te yeh backg color change karega ... that the way we use nth child psuedo selector 
+        .box:nth-child(odd) {
+            background-color: crimson;
+        }
+
+        2) same nth last child , down to up  
+        .box:nth-last-child(1){
+            background-color: darkblue;
+
+        }
+        */
+
+        /* now most important or used one property :- before and after
+         yeh ek threka hai jis di help nal dynamicaly elements and content nu css de help nal before and after the main elements or content add kita ja sakda hai ... 
+
+         syntax :- class::after/before { contant }
+
+         before and after both use kar sakde hannn ek time te , or we can add css .. 
+
+        */
+        .boxes::before{
+             content: "this is content with this before property ";
+             color: rgb(9, 83, 83);
+
+        }
+        .boxes::after{
+              content: "hi this i after the content ";
+              color: blueviolet;
+        }
+
+        /* now selection , es nu ek perticular element or whole page lyie ve add kar sakde han ...
+        this one is also used in websites ... 
+        so eh selected element nu select karda hai or css add karda hai ... 
+               
+        */
+       
+        ::selection{
+             background-color: black;
+             color: blueviolet;
+        }
+
+        /* first letter*/
+        .box::first-letter{
+             color:aqua;
+             font-size: 22px;
+
+        }
+        /* that the way we can target elements or attributes */
+        input::placeholder{
+             background-color: blueviolet;
+
+        } 
+
+
+      /**     
+        that's all about more on important selectors in css 
+
+        today :- date :- 17 mar , time ;- 11.29am
+      
+      **/
+
+    </style>
+</head>
+
+<body>
+
+    <div class="boxes">
+        <div class="box">
+            <h1>box 1</h1>
+            am i box Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas incidunt est, ipsa
+            odit odio blanditiis eaque, voluptatibus facilis officiis tempora aut exercitationem amet quod ad cum, vel
+            necessitatibus quam laboriosam possimus iusto repudiandae totam eum fugiat. Magnam ad mollitia quod! Animi
+            enim ea praesentium molestiae sit itaque obcaecati quod pariatur dolores soluta voluptate impedit laudantium
+            ex est eos non perferendis fugit dignissimos, quia nemo. Ducimus, magni blanditiis? Non tenetur nobis esse
+            libero ab fugiat expedita recusandae porro quibusdam neque repudiandae doloremque itaque suscipit sed
+            assumenda distinctio cupiditate velit temporibus, fugit necessitatibus voluptatum? Numquam hic culpa, optio
+            minus blanditiis et repudiandae?
+        </div>
+        <div data-color="light" class="box">
+            <h1>box 2</h1>
+            am i box Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            voluptatum at aspernatur facere facilis qui dolorum sequi, provident animi ratione ipsa asperiores
+            consectetur ducimus impedit libero laborum dolores aliquid! Repudiandae inventore ipsum libero!
+        </div>
+        <div class="box">
+            <h1>box3</h1>
+            am i box
+        </div>
+        <div class="box">
+            <h1>box4</h1>
+            am i box
+        </div>
+
+        <input type="text" placeholder="Enter your name ">
+
+    </div>
+</body>
+
+</html>
